@@ -12,4 +12,5 @@ RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.
 RUN unzip awscli-bundle.zip
 RUN ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws && rm -rf ./awscli-bundle/install
 RUN mkdir -p /mnt/code
+RUN npm install -g bower grunt
 WORKDIR /mnt/code
